@@ -1,7 +1,6 @@
+module.exports = function getHTML (options, callback) {
 
-function getAndPrintHTML (options) {
-
-  var https = require('https');
+  const https = require('https');
 
   https.get(options, function(response) {
 
@@ -15,18 +14,10 @@ function getAndPrintHTML (options) {
       responseString += chunk;
     });
 
-    // print out string at end of response
+    // At end invokes the callback function.
     response.on('end', function(data) {
-      console.log(responseString);
+      callback(responseString);
     });
   });
-}
 
-var requestOptions = {
-  host: 'sytantris.github.io',
-  path: '/http-examples/step3.html'
 };
-
-
-// Passes a host/path object as the argument.
-getAndPrintHTML(requestOptions);
