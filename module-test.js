@@ -6,7 +6,7 @@ var requestOptions = {
 };
 
 function printHTML(html) {
-  console.log("The html is: ", html);
+  console.log(html);
 }
 
 getHTML(requestOptions, printHTML);
