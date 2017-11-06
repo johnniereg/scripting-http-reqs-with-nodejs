@@ -1,3 +1,5 @@
+// Not complete - to be returned to as a stretch exercise.
+
 var getHTML = require('../http-functions');
 
 var requestOptions = {
