@@ -14,7 +14,6 @@ function getAndPrintHTMLChunks () {
 
     // print out data as it is received, put new line between
     response.on('data', function(data) {
-
       console.log(data + '\n');
     });
   });
